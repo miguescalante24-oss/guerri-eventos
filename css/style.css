@@ -5,6 +5,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
 
+:root {
+    --dorado: #d4ad65;
+    --fondo: #111111;
+    --fondo-secundario: #191919;
+    --texto-secundario: #b5b5b5;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -14,16 +21,13 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #111111;
+    background-color: var(--fondo);
     color: #ffffff;
     line-height: 1.7;
 }
 
-:root {
-    --dorado: #d4ad65;
-    --fondo: #111111;
-    --fondo-secundario: #191919;
-    --texto-secundario: #b5b5b5;
+section {
+    scroll-margin-top: 100px;
 }
 
 /* =========================
@@ -69,6 +73,15 @@ nav a:hover {
     color: var(--dorado);
 }
 
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--dorado);
+    font-size: 30px;
+    cursor: pointer;
+}
+
 /* =========================
    ELEMENTOS GENERALES
 ========================= */
@@ -92,17 +105,29 @@ section h2 {
     background-color: var(--dorado);
     color: #111111;
     padding: 16px 28px;
+    border: none;
     border-radius: 3px;
     text-decoration: none;
+    font-family: inherit;
     font-size: 12px;
     font-weight: 800;
     letter-spacing: 1px;
+    cursor: pointer;
     transition: all 0.3s;
 }
 
 .boton:hover {
     background-color: #f0d29b;
     transform: translateY(-3px);
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--dorado);
+    outline-offset: 4px;
 }
 
 /* =========================
@@ -118,7 +143,9 @@ section h2 {
     align-items: flex-start;
     background:
         linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.35)),
-        linear-gradient(135deg, #302719, #111111);
+        url("../img/portada.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 #inicio h2 {
@@ -250,9 +277,59 @@ section h2 {
         linear-gradient(135deg, #493b27, #111111);
 }
 
-#contacto p:not(.subtitulo) {
+#contacto > p:not(.subtitulo) {
     color: var(--texto-secundario);
     margin-bottom: 35px;
+}
+
+#formulario-contacto {
+    max-width: 600px;
+    margin: 45px auto 0;
+    text-align: left;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 22px;
+}
+
+.campo label {
+    margin-bottom: 8px;
+    color: var(--dorado);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 15px;
+    background-color: #222222;
+    border: 1px solid #444444;
+    border-radius: 4px;
+    color: white;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    outline: none;
+    border-color: var(--dorado);
+}
+
+.campo textarea {
+    resize: vertical;
+}
+
+#respuesta-formulario {
+    margin-top: 20px;
+    color: var(--dorado);
+    font-weight: 600;
+    text-align: center;
 }
 
 /* =========================
@@ -279,7 +356,7 @@ footer p {
 }
 
 /* =========================
-   ADAPTACIÓN A MÓVILES
+   ADAPTACIÓN A TABLETS
 ========================= */
 
 @media (max-width: 900px) {
@@ -303,20 +380,46 @@ footer p {
     .contenedor-galeria {
         grid-template-columns: repeat(2, 1fr);
     }
+
 }
+
+/* =========================
+   ADAPTACIÓN A MÓVILES
+========================= */
 
 @media (max-width: 600px) {
 
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 0;
+    }
+
     header h1 {
         font-size: 20px;
+        letter-spacing: 2px;
     }
 
-    nav {
-        gap: 12px;
+    .menu-toggle {
+        display: block;
     }
 
-    nav a {
-        font-size: 11px;
+    header nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        gap: 18px;
+    }
+
+    header nav.activo {
+        display: flex;
+    }
+
+    header nav a {
+        font-size: 14px;
     }
 
     #inicio {
@@ -345,6 +448,10 @@ footer p {
         padding: 80px 8%;
     }
 
+    #contacto {
+        padding: 80px 7%;
+    }
+
     .contenedor-servicios,
     .contenedor-galeria {
         grid-template-columns: 1fr;
@@ -357,100 +464,5 @@ footer p {
     .foto {
         min-height: 230px;
     }
-
-
-/* MENÚ DESPLEGABLE */
-
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: var(--dorado);
-    font-size: 30px;
-    cursor: pointer;
-}
-
-@media (max-width: 600px) {
-
-    header {
-        position: sticky;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    header nav {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px 0;
-    }
-
-    header nav.activo {
-        display: flex;
-    }
-
-    header nav a {
-        font-size: 14px;
-    }
-}
-
-
-/* FORMULARIO DE CONTACTO */
-
-#formulario-contacto {
-    max-width: 600px;
-    margin: 45px auto 0;
-    text-align: left;
-}
-
-.campo {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 22px;
-}
-
-.campo label {
-    margin-bottom: 8px;
-    color: var(--dorado);
-    font-size: 13px;
-    font-weight: 600;
-}
-
-.campo input,
-.campo select,
-.campo textarea {
-    padding: 15px;
-    background-color: #222222;
-    border: 1px solid #444444;
-    border-radius: 4px;
-    color: white;
-    font-family: inherit;
-    font-size: 14px;
-}
-
-.campo input:focus,
-.campo select:focus,
-.campo textarea:focus {
-    outline: none;
-    border-color: var(--dorado);
-}
-
-.campo textarea {
-    resize: vertical;
-}
-
-#respuesta-formulario {
-    margin-top: 20px;
-    color: var(--dorado);
-    font-weight: 600;
-    text-align: center;
-}
-
 
 }

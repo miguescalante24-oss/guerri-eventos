@@ -1,4 +1,8 @@
 
+// =========================
+// MENÚ DESPLEGABLE
+// =========================
+
 // Seleccionamos el botón y el menú
 const botonMenu = document.getElementById("menu-toggle");
 const menu = document.getElementById("menu");
@@ -28,6 +32,7 @@ enlaces.forEach(function(enlace) {
     enlace.addEventListener("click", function() {
 
         menu.classList.remove("activo");
+
         botonMenu.textContent = "☰";
         botonMenu.setAttribute("aria-expanded", "false");
         botonMenu.setAttribute("aria-label", "Abrir menú");
@@ -36,6 +41,10 @@ enlaces.forEach(function(enlace) {
 
 });
 
+
+// =========================
+// FORMULARIO DE CONTACTO
+// =========================
 
 // Seleccionamos el formulario
 const formulario = document.getElementById("formulario-contacto");
@@ -46,21 +55,14 @@ formulario.addEventListener("submit", function(evento) {
     // Evitamos que la página se recargue
     evento.preventDefault();
 
-    // Recogemos los datos introducidos
+    // Recogemos el nombre introducido
     const nombre = document.getElementById("nombre").value;
-    const email = document.getElementById("email").value;
-    const tipoEvento = document.getElementById("evento").value;
-    const mensaje = document.getElementById("mensaje").value;
 
-    // Mostramos una confirmación
+    // Seleccionamos el mensaje de respuesta
     const respuesta = document.getElementById("respuesta-formulario");
 
+    // Mostramos una confirmación
     respuesta.textContent = "¡Gracias, " + nombre + "! Hemos recibido tus datos de prueba.";
-
-    console.log("Nombre:", nombre);
-    console.log("Correo:", email);
-    console.log("Evento:", tipoEvento);
-    console.log("Mensaje:", mensaje);
 
     // Limpiamos el formulario
     formulario.reset();
