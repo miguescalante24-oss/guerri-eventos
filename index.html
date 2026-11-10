@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Scala Eventos: organización y animación de eventos para momentos inolvidables.">
+    <title>Scala Eventos | Creamos momentos inolvidables</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- CABECERA -->
+    <header>
+        <h1>SCALA EVENTOS</h1>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+            ☰
+        </button>
+
+        <nav id="menu">
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#galeria">Galería</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- PORTADA -->
+        <section id="inicio">
+            <p class="subtitulo">ORGANIZACIÓN DE EVENTOS</p>
+
+            <h2>Momentos únicos.<br>Experiencias inolvidables.</h2>
+
+            <p>
+                Creamos experiencias especiales para que tú solo
+                tengas que preocuparte de disfrutar.
+            </p>
+
+            <a href="#contacto" class="boton">HABLEMOS DE TU EVENTO</a>
+        </section>
+
+        <!-- SERVICIOS -->
+        <section id="servicios">
+
+            <p class="subtitulo">QUÉ HACEMOS</p>
+            <h2>Nuestros servicios</h2>
+
+            <div class="contenedor-servicios">
+
+                <article class="servicio">
+                    <h3>Celebraciones</h3>
+                    <p>
+                        Organizamos cumpleaños, aniversarios y
+                        celebraciones para crear recuerdos especiales.
+                    </p>
+                </article>
+
+                <article class="servicio">
+                    <h3>Bodas y eventos</h3>
+                    <p>
+                        Cuidamos cada detalle para que tus momentos
+                        más importantes sean inolvidables.
+                    </p>
+                </article>
+
+                <article class="servicio">
+                    <h3>Sonido e iluminación</h3>
+                    <p>
+                        Ambientación musical, iluminación y
+                        entretenimiento para todo tipo de eventos.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- NOSOTROS -->
+        <section id="nosotros">
+
+            <p class="subtitulo">QUIÉNES SOMOS</p>
+            <h2>Detrás de cada gran evento hay una gran organización.</h2>
+
+            <p>
+                En Scala Eventos creemos que cada celebración merece
+                ser especial. Trabajamos para ofrecer experiencias
+                cuidadas, adaptadas a cada cliente y llenas de buenos
+                momentos.
+            </p>
+
+        </section>
+
+        <!-- GALERÍA -->
+        <section id="galeria">
+
+            <p class="subtitulo">NUESTRO TRABAJO</p>
+            <h2>Algunos de nuestros eventos</h2>
+
+            <div class="contenedor-galeria">
+
+                <div class="foto">
+                    <img src="img/portada.jpg" alt="Decoración de un evento">
+                </div>
+
+                <div class="foto">
+                    <img src="img/boda.jpg" alt="Celebración de una boda">
+                </div>
+
+                <div class="foto">
+                    <img src="img/escenario.jpg" alt="Escenario de un evento">
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- CONTACTO -->
+        
+    <section id="contacto">
+
+        <p class="subtitulo">¿EMPEZAMOS?</p>
+        <h2>Cuéntanos qué tienes en mente.</h2>
+
+        <p>Rellena el formulario y nos pondremos en contacto contigo.</p>
+
+        <form id="formulario-contacto">
+
+            <div class="campo">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+            </div>
+
+            <div class="campo">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+            </div>
+
+            <div class="campo">
+                <label for="evento">Tipo de evento</label>
+                <select id="evento" name="evento" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="Boda">Boda</option>
+                    <option value="Cumpleaños">Cumpleaños</option>
+                    <option value="Celebración">Celebración</option>
+                    <option value="Evento empresarial">Evento empresarial</option>
+                    <option value="Otro">Otro</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="mensaje">Cuéntanos más</label>
+                <textarea id="mensaje" name="mensaje" rows="5" placeholder="Describe tu evento..." required></textarea>
+            </div>
+
+            <button type="submit" class="boton">ENVIAR MENSAJE</button>
+
+            <p id="respuesta-formulario"></p>
+
+        </form>
+
+    </section>
+
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <h3>SCALA EVENTOS</h3>
+        <p>© 2026 Scala Eventos. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
