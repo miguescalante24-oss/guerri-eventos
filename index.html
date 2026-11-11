@@ -1,171 +1,209 @@
-
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="GuerriEventos: organización y animación de eventos para momentos inolvidables.">
+    <meta name="description" content="GuerriEventos: organización y animación de eventos. Bodas, celebraciones, eventos corporativos, sonido e iluminación.">
+    <meta name="theme-color" content="#111111">
 
     <title>GuerriEventos | Creamos momentos inolvidables</title>
 
+    <!-- Redes sociales (al compartir el enlace) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="GuerriEventos | Creamos momentos inolvidables">
+    <meta property="og:description" content="Diseñamos y organizamos experiencias únicas. Nos encargamos de cada detalle para que tú solo tengas que disfrutar.">
+    <meta property="og:image" content="img/portada.jpg">
+    <meta property="og:locale" content="es_ES">
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23111'/%3E%3Ctext x='50' y='69' font-size='58' text-anchor='middle' fill='%23d4ad65' font-family='Georgia,serif' font-weight='700'%3EG%3C/text%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap">
     <link rel="stylesheet" href="css/style.css">
+
+    <script>document.documentElement.classList.add("js");</script>
 </head>
 
 <body>
+    <a class="saltar" href="#contenido">Saltar al contenido</a>
+    <div id="progreso" aria-hidden="true"></div>
 
     <!-- CABECERA -->
     <header>
-        <h1>GUERRIEVENTOS</h1>
+        <h1><a href="#inicio">GUERRIEVENTOS</a></h1>
 
-        <button
-            class="menu-toggle"
-            id="menu-toggle"
-            type="button"
-            aria-label="Abrir menú"
-            aria-expanded="false"
-            aria-controls="menu">
-            ☰
-        </button>
+        <button class="menu-toggle" id="menu-toggle" type="button"
+            aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">☰</button>
 
-        <nav id="menu" aria-label="Menú principal">
-            <a href="#inicio">Inicio</a>
-            <a href="#servicios">Servicios</a>
-            <a href="#nosotros">Nosotros</a>
-            <a href="#galeria">Galería</a>
-            <a href="#contacto">Contacto</a>
+        <nav id="menu" aria-label="Principal">
+            <a href="#inicio">INICIO</a>
+            <a href="#servicios">SERVICIOS</a>
+            <a href="#proceso">CÓMO TRABAJAMOS</a>
+            <a href="#nosotros">NOSOTROS</a>
+            <a href="#galeria">GALERÍA</a>
+            <a href="#contacto">CONTACTO</a>
         </nav>
     </header>
 
-    <main>
+    <main id="contenido">
 
         <!-- PORTADA -->
         <section id="inicio">
-
             <p class="subtitulo">ORGANIZACIÓN DE EVENTOS</p>
-
-            <h2>Momentos únicos.<br>Experiencias inolvidables.</h2>
-
-            <p>
-                Creamos experiencias especiales para que tú solo
-                tengas que preocuparte de disfrutar.
+            <h2>Convertimos tus ideas en momentos inolvidables.</h2>
+            <p class="texto-portada">
+                Diseñamos y organizamos experiencias únicas.
+                Nos encargamos de cada detalle para que tú
+                solo tengas que disfrutar.
             </p>
-
-            <a href="#contacto" class="boton">HABLEMOS DE TU EVENTO</a>
-
+            <div class="acciones-portada">
+                <a href="#contacto" class="boton">SOLICITAR PRESUPUESTO</a>
+                <a href="#servicios" class="boton boton-secundario">DESCUBRIR SERVICIOS</a>
+            </div>
         </section>
 
         <!-- SERVICIOS -->
         <section id="servicios">
-
             <p class="subtitulo">QUÉ HACEMOS</p>
             <h2>Nuestros servicios</h2>
+            <p class="intro-servicios">
+                Cada evento es diferente. Por eso creamos propuestas
+                adaptadas a cada ocasión, cuidando todos los detalles.
+            </p>
 
             <div class="contenedor-servicios">
-
                 <article class="servicio">
                     <h3>Celebraciones</h3>
-                    <p>
-                        Organizamos cumpleaños, aniversarios y
-                        celebraciones para crear recuerdos especiales.
-                    </p>
+                    <p>Organizamos cumpleaños, aniversarios y reuniones especiales para convertir cualquier ocasión en un recuerdo inolvidable.</p>
                 </article>
-
                 <article class="servicio">
                     <h3>Bodas y eventos</h3>
-                    <p>
-                        Cuidamos cada detalle para que tus momentos
-                        más importantes sean inolvidables.
-                    </p>
+                    <p>Cuidamos cada detalle de ese día tan especial: decoración, coordinación, ambientación y mucho más.</p>
                 </article>
-
+                <article class="servicio">
+                    <h3>Eventos corporativos</h3>
+                    <p>Damos forma a presentaciones, reuniones de empresa, inauguraciones y encuentros profesionales.</p>
+                </article>
+                <article class="servicio">
+                    <h3>Fiestas privadas</h3>
+                    <p>Diseñamos fiestas a medida, adaptadas al estilo, el espacio y las preferencias de cada cliente.</p>
+                </article>
                 <article class="servicio">
                     <h3>Sonido e iluminación</h3>
-                    <p>
-                        Ambientación musical, iluminación y
-                        entretenimiento para todo tipo de eventos.
-                    </p>
+                    <p>Creamos el ambiente perfecto con soluciones de sonido e iluminación para cada tipo de evento.</p>
                 </article>
-
+                <article class="servicio">
+                    <h3>Organización integral</h3>
+                    <p>Nos ocupamos de la planificación y coordinación para que todo salga como estaba previsto.</p>
+                </article>
             </div>
+        </section>
 
+        <!-- CÓMO TRABAJAMOS -->
+        <section id="proceso">
+            <p class="subtitulo">ASÍ LO HACEMOS</p>
+            <h2>De tu idea a un momento inolvidable</h2>
+            <p class="intro-proceso">
+                Nos gusta que organizar un evento sea tan especial
+                como disfrutarlo. Por eso seguimos un proceso sencillo.
+            </p>
+
+            <ol class="contenedor-proceso">
+                <li class="paso">
+                    <span class="numero-paso">01</span>
+                    <h3>Nos cuentas tu idea</h3>
+                    <p>Escuchamos tus propuestas, conocemos tus preferencias y descubrimos qué tipo de evento tienes en mente.</p>
+                </li>
+                <li class="paso">
+                    <span class="numero-paso">02</span>
+                    <h3>Diseñamos el evento</h3>
+                    <p>Preparamos una propuesta adaptada a tus necesidades, cuidando el estilo, los detalles y la planificación.</p>
+                </li>
+                <li class="paso">
+                    <span class="numero-paso">03</span>
+                    <h3>Preparamos cada detalle</h3>
+                    <p>Coordinamos los elementos necesarios para que todo esté listo y en su sitio antes de la celebración.</p>
+                </li>
+                <li class="paso">
+                    <span class="numero-paso">04</span>
+                    <h3>¡Toca disfrutar!</h3>
+                    <p>Llega el gran día. Todo está preparado para que solo tengas que preocuparte de disfrutar.</p>
+                </li>
+            </ol>
         </section>
 
         <!-- NOSOTROS -->
         <section id="nosotros">
-
             <p class="subtitulo">QUIÉNES SOMOS</p>
-
             <h2>Detrás de cada gran evento hay una gran organización.</h2>
-
-            <p>
+            <p class="texto-nosotros">
                 En GuerriEventos creemos que cada celebración merece
                 ser especial. Trabajamos para ofrecer experiencias
                 cuidadas, adaptadas a cada cliente y llenas de buenos
                 momentos.
             </p>
 
+            <ul class="valores">
+                <li><strong>Cuidamos el detalle</strong><span>Lo pequeño es lo que se recuerda.</span></li>
+                <li><strong>Te escuchamos</strong><span>Tu idea manda; nosotros la hacemos realidad.</span></li>
+                <li><strong>Todo en un solo equipo</strong><span>Organización, sonido e iluminación juntos.</span></li>
+            </ul>
         </section>
 
         <!-- GALERÍA -->
         <section id="galeria">
-
             <p class="subtitulo">NUESTRO TRABAJO</p>
-            <h2>Algunos de nuestros eventos</h2>
+            <h2>Momentos que inspiran</h2>
+            <p class="intro-galeria">
+                Cada celebración tiene su propia esencia.
+                Estas son algunas de las experiencias que nos inspiran.
+            </p>
 
             <div class="contenedor-galeria">
-
-                <div class="foto">
-                    <img src="img/portada.jpg" alt="Decoración de un evento" loading="lazy">
-                </div>
-
-                <div class="foto">
-                    <img src="img/boda.jpg" alt="Celebración de una boda" loading="lazy">
-                </div>
-
-                <div class="foto">
-                    <img src="img/escenario.jpg" alt="Escenario de un evento" loading="lazy">
-                </div>
-
+                <article class="foto">
+                    <img src="img/portada.jpg" alt="Decoración de un evento especial" loading="lazy">
+                    <div class="info-foto">
+                        <h3>Celebraciones especiales</h3>
+                        <p>Detalles que hacen único cada momento.</p>
+                    </div>
+                </article>
+                <article class="foto">
+                    <img src="img/boda.jpg" alt="Decoración de una boda" loading="lazy">
+                    <div class="info-foto">
+                        <h3>Bodas inolvidables</h3>
+                        <p>Un día especial cuidado hasta el último detalle.</p>
+                    </div>
+                </article>
+                <article class="foto">
+                    <img src="img/escenario.jpg" alt="Escenario preparado para un evento" loading="lazy">
+                    <div class="info-foto">
+                        <h3>Eventos y espectáculos</h3>
+                        <p>Ambientes preparados para sorprender.</p>
+                    </div>
+                </article>
             </div>
-
         </section>
 
         <!-- CONTACTO -->
         <section id="contacto">
-
             <p class="subtitulo">¿EMPEZAMOS?</p>
             <h2>Cuéntanos qué tienes en mente.</h2>
-
             <p>Rellena el formulario y nos pondremos en contacto contigo.</p>
 
-            <form id="formulario-contacto">
-
+            <form id="formulario-contacto" novalidate>
                 <div class="campo">
                     <label for="nombre">Nombre</label>
-                    <input
-                        type="text"
-                        id="nombre"
-                        name="nombre"
-                        placeholder="Tu nombre"
-                        autocomplete="name"
-                        required>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" autocomplete="name" required>
                 </div>
 
                 <div class="campo">
                     <label for="email">Correo electrónico</label>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="ejemplo@correo.com"
-                        autocomplete="email"
-                        required>
+                    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" autocomplete="email" required>
                 </div>
 
                 <div class="campo">
                     <label for="evento">Tipo de evento</label>
-
                     <select id="evento" name="evento" required>
                         <option value="">Selecciona una opción</option>
                         <option value="Boda">Boda</option>
@@ -178,35 +216,42 @@
 
                 <div class="campo">
                     <label for="mensaje">Cuéntanos más</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Describe tu evento..." required></textarea>
+                </div>
 
-                    <textarea
-                        id="mensaje"
-                        name="mensaje"
-                        rows="5"
-                        placeholder="Describe tu evento..."
-                        required></textarea>
+                <!-- Anti-spam: los bots lo rellenan, las personas no lo ven -->
+                <div class="trampa" aria-hidden="true">
+                    <label>No rellenar <input type="text" name="web" tabindex="-1" autocomplete="off"></label>
                 </div>
 
                 <button type="submit" class="boton">ENVIAR MENSAJE</button>
 
                 <p id="respuesta-formulario" role="status" aria-live="polite"></p>
-
             </form>
-
         </section>
-
     </main>
 
     <!-- PIE DE PÁGINA -->
     <footer>
-
         <h3>GUERRIEVENTOS</h3>
-
+        <p>Creamos momentos inolvidables.</p>
+        <p class="footer-contacto" id="footer-contacto"></p>
         <p>© 2026 GuerriEventos. Todos los derechos reservados.</p>
-
     </footer>
 
-    <script src="js/script.js"></script>
+    <!-- Botones flotantes -->
+    <a id="whatsapp" class="flotante whatsapp" href="#" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp" hidden>
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.4 5 5.2-1.4A10 10 0 1 0 12 2Zm5.8 14.1c-.2.7-1.4 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3s.8-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.7 1.2 1.5 1.9 1 .9 1.900 1.200 2.200 1.300.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.1.1.7-.1 1.4Z"/></svg>
+    </a>
+    <button id="arriba" class="flotante arriba" type="button" aria-label="Volver arriba" hidden>↑</button>
 
+    <!-- Visor de galería -->
+    <dialog id="visor" aria-label="Imagen ampliada">
+        <button id="visor-cerrar" type="button" aria-label="Cerrar">✕</button>
+        <img src="" alt="">
+        <p id="visor-texto"></p>
+    </dialog>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
